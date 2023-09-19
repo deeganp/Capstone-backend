@@ -30,6 +30,7 @@ app.use("/users", userRoutes);
 
 /** Handle 404 errors -- this matches everything */
 app.use(function (req, res, next) {
+  console.log('Request received for:', req.url);
   return next(new NotFoundError());
 });
 
