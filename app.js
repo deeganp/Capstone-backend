@@ -1,13 +1,10 @@
 "use strict";
 
-/** Express app for jobly. */
-
 const express = require("express");
 const cors = require("cors");
 
 const { NotFoundError } = require("./expressError");
 
-const { authenticateJWT } = require("./middleware/auth");
 const userRoutes = require("./routes/users");
 require('dotenv').config();
 
